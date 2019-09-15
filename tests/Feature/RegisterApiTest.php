@@ -12,9 +12,10 @@ class RegisterApiTest extends TestCase
     use RefreshDatabase;
 
     /**
+     * 新しいユーザーを作成して返却
      * @test
      */
-    public function should_newuser()
+    public function shouldReturnNewUser()
     {
         $data = [
             'name' => 'takayyz user',
