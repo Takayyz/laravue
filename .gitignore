@@ -12,3 +12,8 @@ npm-debug.log
 yarn-error.log
 
 .DS_Store
+
+# Laravel Mix用
+public/js/vendor.js
+public/css/app.css
+public/mix-manifest.json
