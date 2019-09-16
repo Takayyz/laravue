@@ -3,7 +3,10 @@ import Axios from "axios"
 const state = {
   user: null
 }
-const getters = {}
+const getters = {
+  check: state => !! state.user, // trueかfalseを返す
+  username: state => state.user ? state.user.name : ''
+}
 const mutations = {
   setUser (state, user) {
     state.user = user
