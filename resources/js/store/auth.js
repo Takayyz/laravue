@@ -17,6 +17,10 @@ const actions = {
   async login (context, data) {
     const response = await Axios.post('/api/login', data)
     context.commit('setUser', response.data)
+  },
+  async logout (context) {
+    const response = await axios.post('/api/logout')
+    context.commit('setUser', null)
   }
 }
 
