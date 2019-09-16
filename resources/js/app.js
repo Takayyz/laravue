@@ -5,6 +5,8 @@ import router from './router'
 import store from './store'
 // ルートコンポーネントimport
 import App from './App.vue'
+// bootstrap設定import
+import './bootstrap'
 
 new Vue({
   el: '#app',
