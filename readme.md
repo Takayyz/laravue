@@ -11,10 +11,10 @@
 2. $composer install
 3. $npm install
 4. $cp .env.example .env
-5. .env修正 //DB周り, (APP_NAME)
 5. $php artisan key:generate
-6. $php artisan migrate
-7. $php artisan db:seed
+6. .env修正 //DB周り, (APP_NAME)
+7. $php artisan migrate
+8. $php artisan db:seed
 ```
 
 If you get the following error after running **php artisan db:seed**:
