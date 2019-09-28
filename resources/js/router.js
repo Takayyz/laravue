@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 // ページコンポーネントをインポート
 import PhotoList from './pages/PhotoList.vue'
 import Login from './pages/Login.vue'
+import SystemError from './pages/errors/System.vue'
 import store from './store'
 
 // VueRouterプラグインを使用
@@ -26,6 +27,10 @@ const routes = [
         next()
       }
     }
+  },
+  {
+    path: '/500',
+    component: SystemError
   }
 ]
 

@@ -62,14 +62,22 @@ export default {
     async login () {
       // authストアのloginアクションを呼ぶ
       await this.$store.dispatch('auth/login', this.loginForm)
-      // トップページへ遷移
-      this.$router.push('/')
+
+      if (this.apiStatus) {
+        // トップページへ遷移
+        this.$router.push('/')
+      }
     },
     async register () {
       // authストアのregisterアクションを呼ぶ
       await this.$store.dispatch('auth/register', this.registerForm)
       // トップページへ遷移
       this.$router.push('/')
+    }
+  },
+  conputed: {
+    apiStatus () {
+      return this.$store.state.auth.apiStatus
     }
   }
 }
