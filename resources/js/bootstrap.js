@@ -46,3 +46,9 @@ window.axios.interceptors.request.use(config => {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+// レスポンスを受けた後の処理を上書く(第一引数：成功時、第二引数：失敗時)
+window.axios.interceptors.response.use(
+  response =>response,
+  error => error.response || error
+)
