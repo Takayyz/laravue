@@ -1,5 +1,5 @@
 import Axios from "axios"
-import { OK, UNPROCESSABLE_ENTITY } from '../util'
+import { OK, CREATED, UNPROCESSABLE_ENTITY } from '../util'
 
 const state = {
   user: null,
@@ -40,7 +40,7 @@ const actions = {
       return false
     }
 
-    context.commit('setApistatus', false)
+    context.commit('setApiStatus', false)
     if (response.status === UNPROCESSABLE_ENTITY) {
       context.commit('setRegisterErrorMessages', response.data.errors)
     } else {

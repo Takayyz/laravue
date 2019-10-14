@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 // ページコンポーネントをインポート
 import PhotoList from './pages/PhotoList.vue'
+import PhotoDetail from './pages/PhotoDetail.vue'
 import Login from './pages/Login.vue'
 import SystemError from './pages/errors/System.vue'
 import store from './store'
@@ -18,6 +19,11 @@ const routes = [
     component: PhotoList
   },
   {
+    path: '/photos/:id',
+    component: PhotoDetail,
+    props: true
+  },
+  {
     path: '/login',
     component: Login,
     beforeEnter (to, from, next) {
@@ -31,7 +37,7 @@ const routes = [
   {
     path: '/500',
     component: SystemError
-  }
+  },
 ]
 
 // VueRouterインスタンスを作成

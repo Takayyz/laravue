@@ -31,7 +31,7 @@ export default {
     errorCode: {
       handler (val) {
         if (val === INTERNAL_SERVER_ERROR) {
-          this.$store.push('/500')
+          this.$router.push('/500')
         }
       },
       immediate: true
