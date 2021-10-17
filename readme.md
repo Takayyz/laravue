@@ -1,4 +1,4 @@
-# takayyz
+# laravue
 
 ## Requirements
 | PHP         | Laravel     | PostgreSQL  | Node        | npm         | Vue.js      | Vue Router  | Vuex        |
@@ -18,12 +18,12 @@
 ```
 
 If you get the following error after running **php artisan db:seed**:
-```
+```php
 ReflectionException: Class ClassNameSeeder does not exist
 ```
 
 try to run below:
-```
+```sh
 composer dump-autoload
 ```
 
